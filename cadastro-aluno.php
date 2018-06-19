@@ -1,3 +1,10 @@
+<?php
+require_once('verificasessao.php');
+require_once('conexao.php');
+?>
+
+<!DOCTYPE html>
+
 <html>
 <head>
 <meta charset="UTF-8" />
@@ -54,20 +61,29 @@
 	
  
 	<div class="col-md-9">
-		<form>		
+		
+
+		<input input type="hidden" name="txtaluno_id" <?php echo "value=". $aluno_id . "" ?>>
+
 			<div class="form-group">
 				<label for="nome_completo">* Digite seu nome completo:</label>
-				<input type="text" class="form-control" name="nome_completo" required>
+				<input type="text" class="form-control" name="txtnome_completo" required="true"
+				<?php if (!$nome == null) { echo "value='". $nome ."'";}; ?>>
+				
 			</div>
  
 			<div class="form-group">
 				<label for="matricula">* Matrícula:</label>
-				<input type="text" class="form-control" name="matricula" required>
+				<input type="text" class="form-control" name="txtmatricula" required="true"
+				<?php if (!$matricula == null) { echo "value='". $matricula ."'";}; ?>>
+				
             </div>
             
             <div class="form-group">
 				<label for="periodo">* Periodo:</label>
-				<input type="text" class="form-control" name="periodo" required>
+				<input type="text" class="form-control" name="txtperiodo" required="true"
+				<?php if (!$nperiodo == null) { echo "value='". $periodo ."'";}; ?>>
+				
 			</div>
  
 			<!-- Agora vou sub-dividir esta coluna em outras três -->
@@ -77,11 +93,11 @@
 						<label for="idade">Informe sua idade:</label>
 						<input type="number" class="form-control" name="idade" min="15" max="110" required>
 					</div> -->				
-					<div class="form-group">
+					<!-- <div class="form-group">
 						<label for="genero">Informe seu género sexual:</label><br/>
 						<input type="radio" name="genero" value="masculino"> Masculino<br/>
 						<input type="radio" name="genero" value="feminino"> Feminino
-					</div>
+					</div> -->
 				</div>
  
 				<div class="col-md-4">
@@ -107,9 +123,13 @@
 			<!-- fim -->	
  
 			<div class="form-group" align="center">
-				<button type="submit" class="btn btn-lg btn-success"> 
+			<input class="btn btn-primary" style="text-decoration: none; color: white;" type="submit" name="enviar">
+				<!-- <button type="submit" class="btn btn-lg btn-success"> 
 					<span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Enviar dados
-				</button>
+				</button> -->
+
+				<a href="cadastro-aluno.php"> Cancelar
+				</a>
 			</div>
  
  
