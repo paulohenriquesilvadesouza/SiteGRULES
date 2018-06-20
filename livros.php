@@ -33,18 +33,7 @@ $currentPage = 'livros';
         <h1>Livro</h1>
     </div>
 
-    <nav class="navbar navbar-static-top">
-        <div class="container" align="center">
-        <ul class="nav nav-pills">
-        <li role="presentation" class="active"><a href="index.php">Home</a></li>
-        <li role="presentation"><a href="bach.php">Alunos</a></li>
-        <li role="presentation"><a href="beethoven.php">Evento</a></li>
-        <li role="presentation"><a href="chopin.php">Grupos</a></li>
-        <li role="presentation"><a href="http://vest.doctum.edu.br/unidade/ipatinga/">Contato</a></li>
-        <li role="presentation"><a href="livros.php">Livro</a></li>
-        </ul>
-        </div>
-    </nav>
+<?php include 'nav.php'; ?>
 
 <div class="jumbotron">
     <div class="container" align="center">

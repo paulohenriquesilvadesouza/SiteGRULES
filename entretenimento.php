@@ -25,19 +25,7 @@
         <h1>Entretenimento<small></small></h1>
     </div>
 
-    <nav class="navbar navbar-static-top">
-        <div class="container" align="center">
-        <ul class="nav nav-pills">
-        <li role="presentation" class="active"><a href="index.php">Home</a></li>
-        <li role="presentation"><a href="bach.php">Johann Sebastian Bach</a></li>
-        <li role="presentation"><a href="#">Ludwig van Beethoven</a></li>
-        <li role="presentation"><a href="#">Frédéric Chopin</a></li>
-        <li role="presentation"><a href="#">Wolfgang Amadeus Mozart</a></li>
-        <li role="presentation"><a href="#">Contato</a></li>
-        <li role="presentation"><a href="entretenimento.php">Entretenimento</a></li>
-        </ul>
-        </div>
-    </nav>
+<?php include 'nav.php'; ?>
 
 <div class="jumbotron">
     <!-- Adiciona -->
