@@ -8,6 +8,8 @@
         <li role="presentation"><a href="chopin.php">Grupos</a></li>
         <li role="presentation"><a href="http://vest.doctum.edu.br/unidade/ipatinga/">Contato</a></li>
         <li role="presentation"><a href="livros.php">Livro</a></li>
+        <a class="nav-link btn btn-danger" href="index.php">Sair</a>
         </ul>
+        
         </div>
 </nav>
