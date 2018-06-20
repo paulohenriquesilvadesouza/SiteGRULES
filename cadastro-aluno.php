@@ -1,7 +1,3 @@
-<?php
-require_once('verificasessao.php');
-require_once('conexao.php');
-?>
 
 <!DOCTYPE html>
 
@@ -67,22 +63,19 @@ require_once('conexao.php');
 
 			<div class="form-group">
 				<label for="nome_completo">* Digite seu nome completo:</label>
-				<input type="text" class="form-control" name="txtnome_completo" required="true"
-				<?php if (!$nome == null) { echo "value='". $nome ."'";}; ?>>
+				<input type="text" class="form-control" name="txtnome_completo" required="true" <?php if (!$cd_nome_completo == null) { echo "value='". $cd_nome_completo ."'";}; ?>>
 				
 			</div>
  
 			<div class="form-group">
 				<label for="matricula">* Matrícula:</label>
-				<input type="text" class="form-control" name="txtmatricula" required="true"
-				<?php if (!$matricula == null) { echo "value='". $matricula ."'";}; ?>>
+				<input type="text" class="form-control" name="txtmatricula" required="true" <?php if (!$cd_matricula == null) { echo "value='". $cd_matricula ."'";}; ?>>
 				
             </div>
             
             <div class="form-group">
 				<label for="periodo">* Periodo:</label>
-				<input type="text" class="form-control" name="txtperiodo" required="true"
-				<?php if (!$nperiodo == null) { echo "value='". $periodo ."'";}; ?>>
+				<input type="text" class="form-control" name="txtperiodo" required="true" <?php if (!$cd_periodo == null) { echo "value='". $cd_periodo ."'";}; ?>>
 				
 			</div>
  
@@ -123,10 +116,10 @@ require_once('conexao.php');
 			<!-- fim -->	
  
 			<div class="form-group" align="center">
-			<input class="btn btn-primary" style="text-decoration: none; color: white;" type="submit" name="enviar">
-				<!-- <button type="submit" class="btn btn-lg btn-success"> 
-					<span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Enviar dados
-				</button> -->
+				<button type="submit" class="btn btn-lg btn-success"> 
+					<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+					Enviar dados
+				</button>
 
 				<a href="cadastro-aluno.php"> Cancelar
 				</a>
