@@ -52,7 +52,7 @@ include('carrega-aluno.php');
 	<div class="row">
 	<div class="col-md-9">
 		<input input type="hidden" name="txtaluno_id" <?php echo "value=". $aluno_id . "" ?>>
-
+			
 			<div class="form-group">
 				<label for="nome_completo">* Digite seu nome completo:</label>
 				<input type="text" class="form-control" name="txtnome_completo" required="true" <?php if (!$cd_nome_completo == null) { echo "value='". $cd_nome_completo ."'";}; ?>>
