@@ -30,7 +30,7 @@ CREATE TABLE apresentacao (
 
 
 CREATE TABLE evento (
-    evento_id integer NOT NULL,
+    evento_id integer PRIMARY KEY,
     semestre character varying(7) NOT NULL,
     tema character varying(50) NOT NULL
 );

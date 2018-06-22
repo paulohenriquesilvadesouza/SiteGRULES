@@ -9,18 +9,18 @@ $cd_periodo = $_POST['txtperiodo'];
 $aluno_id = null;
 $aluno_id = $_POST['txtaluno_id'];
 
-echo "<script>console.log('aluno_id=$aluno_id');</script>";
+echo "<script>console.log('aluno_id = $aluno_id');</script>";
+
 
 if($aluno_id == null){
-    $sql = "INSERT INTO aluno (`aluno_id`, `matricula`, `nome`, `periodo`) VALUES ('$aluno_id' ,'$cd_matricula','$cd_nome_completo','$cd_periodo')";
+    $sql = "INSERT INTO aluno (`matricula`, `nome`, `periodo`) VALUES ('$cd_matricula','$cd_nome_completo','$cd_periodo')";
 	$operacao = 'Cadastrado';
 }
 else{
-	$sql = "UPDATE aluno SET `aluno_id`='$aluno_id', `matricula`='$cd_matricula',`nome`='$cd_nome_completo',`periodo`='$cd_periodo' WHERE `aluno`.`aluno_id` =" . $aluno_id . ";";
+	$sql = "UPDATE aluno SET `matricula`='$cd_matricula',`nome`='$cd_nome_completo',`periodo`='$cd_periodo' WHERE `aluno`.`aluno_id` =" . $aluno_id . ";";
 	echo "<script>console.log('$sql');</script>";
 	$operacao = 'Atualizado';
 }
-
 
 $query = mysqli_query($conn,$sql);
 

@@ -13,7 +13,7 @@ $cd_periodo = null;
 
 switch ($operacao) {
  	case 1: //Novo registro
- 		# code...
+
  	break;
 
  	case 2: //Editar registro
