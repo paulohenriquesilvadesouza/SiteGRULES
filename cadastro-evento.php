@@ -48,7 +48,7 @@ include('carrega-evento.php');
 					Enviar dados
 				</button>
 
-				<a href="cadastro-evento.php"> Cancelar
+				<a href="evento.php"> Cancelar
 				</a>
 			</div>
 	

@@ -55,7 +55,7 @@ include('carrega-aluno.php');
 					Enviar dados
 				</button>
 
-				<a href="cadastro-aluno.php"> Cancelar
+				<a href="alunos.php"> Cancelar
 				</a>
 			</div>
 	
