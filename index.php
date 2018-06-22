@@ -1,28 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title> GRULES &copy </title>
-		<link rel="icon" type="image/png" href="img/logo-doctum.png">
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="print.css" type="text/css" media="print">
-        <link href="css/font.css" rel="stylesheet">
-        <link rel="stylesheet" href="lib\css\fontawesome-all.css" >
-        <link href="css/xx.css" rel="stylesheet">
-        <link href="js/xx.js" rel="stylesheet">
-
-<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-
-<script src="http://mymaplist.com/js/vendor/TweenLite.min.js"></script>
-<!-- This is a very simple parallax effect achieved by simple CSS 3 multiple backgrounds, made by http://twitter.com/msurguy -->
-</head>
-
-<body>  
+<?php include('head.php'); ?>
 <div class="container">
     <div class="row vertical-offset-100">
     	<div class="col-md-4 col-md-offset-4">
@@ -52,4 +30,5 @@
 		</div>
 	</div>
 </div>
-</body>
+
+<?php include('footer.php'); ?>
