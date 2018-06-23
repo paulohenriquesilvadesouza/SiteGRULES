@@ -21,7 +21,7 @@ CREATE TABLE alunos_evento (
 
 
 CREATE TABLE apresentacao (
-    apresentacao_id integer NOT NULL,
+    apresentacao_id integer PRIMARY KEY,
     datahora timestamp without time zone,
     resumo text,
     titulo character varying(100),
