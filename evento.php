@@ -23,6 +23,7 @@ echo "	<thead class='thead-dark'>";
 echo "		<tr>";
 echo "			<th style='width: 20px'>ID</th>";
 echo "			<th>Nome</th>";
+echo "			<th>Semestre</th>";
 echo "			<th style='width: 15px'></th>";
 echo "			<th style='width: 15px'> <a href='cadastro-evento.php?operacao=1' style='text-decoration: none; color: white;'> <button class='btn btn-success'> Novo Evento </button> </a> </th>";
 echo "		</tr>";
@@ -30,11 +31,11 @@ echo "	</thead>";
 echo "<tbody>";
 require_once("conexao.php");
 if (!$conn->connect_error){
-	$sql = "SELECT evento_id, tema FROM evento";
+	$sql = "SELECT evento_id, tema, semestre FROM evento";
 	$result = mysqli_query($conn,$sql);
 	if ($result->num_rows > 0) {
 		while($row = $result->fetch_assoc()) {
-			echo "<tr><td>" . $row["evento_id"]. "</td><td>" . $row["tema"]. " </td>
+			echo "<tr><td>" . $row["evento_id"]. "</td><td>" . $row["tema"]. " </td><td>" . $row["semestre"]. " </td>
 			<td style='text-align: right;'>
 			<a href='cadastro-evento.php?operacao=2&id=" .  $row["evento_id"] . "'><i class='fas fa-edit'></i></a>
 			</td>
@@ -44,7 +45,7 @@ if (!$conn->connect_error){
 			</tr>";
 		}
 	} else {
-		echo "<tr><td> -- </td><td>Sem dados para apresentar...</td></tr>";
+		echo "<tr><td> -- </td><td>Sem dados para apresentar...</td><td> --- </td></tr>";
 	}
 }
 $conn->close();
