@@ -47,6 +47,7 @@ if (!$conn->connect_error){
 	} else {
 		echo "<tr><td> -- </td><td>Sem dados para apresentar...</td><td> --- </td></tr>";
 	}
+	
 }
 $conn->close();
 echo "	</tbody>";
