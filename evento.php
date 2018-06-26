@@ -30,6 +30,7 @@ echo "		</tr>";
 echo "	</thead>";
 echo "<tbody>";
 
+	/* -- TENTANDO APLICAR O SOAP --
 		$soapclient = new SoapClient('192.168.0.7:8080/grules-soap-sever/EventoWebService?wsdl');
 		$response = $soapclient->loadAllEvento();
 		
@@ -37,7 +38,7 @@ echo "<tbody>";
 
 
 
-		 echo "<script>console.log('$response');</script>";
+		 echo "<script>console.log('$response');</script>";*/
 require_once("conexao.php");
 if (!$conn->connect_error){
 	$sql = "SELECT evento_id, tema, semestre FROM evento";
