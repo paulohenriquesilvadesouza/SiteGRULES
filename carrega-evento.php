@@ -16,7 +16,7 @@ switch ($operacao) {
  	break;
 
  	case 2: //Editar registro
- 	require_once("conexao.php");
+ 	/*require_once("conexao.php");
  	if (!$conn->connect_error){
 
  		$id = $_GET['id'];
@@ -30,7 +30,14 @@ switch ($operacao) {
             $cd_semestre = $row["semestre"];
  			$cd_tema = $row["tema"];
  		}
- 	}
+	 }
+	 */
+
+		 $soapclient = new SoapClient('192.168.0.7:8080/grules-soap-sever/EventoWebService?wsdl');
+		 $response = $soapclient->loadAllEvento();
+		 var_dump($response);
+		 
+		 
  	break;
 
  } 
