@@ -1,6 +1,6 @@
 <?php
 require_once('verificasessao.php');
-require_once('aluno-apresentacao.php');
+//require_once('aluno-apresentacao.php');
 ?>
 
 <?php include('head.php'); ?>

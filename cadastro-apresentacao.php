@@ -2,7 +2,7 @@
 require_once('verificasessao.php');
 $title = 'Cadastrar Apresentação';
 $currentPage = 'cadastro-apresentacao';
-include('carrega-apresentacao.php');
+require_once('carrega-apresentacao.php');
 ?>
 
 <?php include('head.php'); ?>
