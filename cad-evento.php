@@ -13,8 +13,24 @@ echo "<script>console.log('evento_id = $evento_id');</script>";
 
 
 if($evento_id == null){
-    $sql = "INSERT INTO evento (`semestre`, `tema`) VALUES ('$cd_semestre','$cd_tema')";
-	$operacao = 'Cadastrado';
+
+class Evento {
+	function __construct($id, $semestre, $tema) 
+	{
+		$this->id = $id;
+		$this->semestre = $semestre;
+		$this->tema = $tema;
+	}
+}
+
+ini_set("soap.wsdl_cache_enabled", "0"); //Não permite que se armazena cache dos metodos do SOAP // Essa configuração foi extremamente necessária, depois te explico o porquê, não excluir!!!
+
+$client = new SoapClient('http://localhost:8080/grules-soap-sever/EventoWebService?wsdl');
+    $evento = new Evento(null, "AAA", "AAA");
+	$parameters = array(
+	"evento" => $evento
+					);
+	$results = $client->saveEvento($parameters);
 }
 else{
 	$sql = "UPDATE evento SET `semestre`='$cd_semestre',`tema`='$cd_tema' WHERE `evento`.`evento_id` =" . $evento_id . ";";
